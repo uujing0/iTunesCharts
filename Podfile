@@ -4,7 +4,7 @@
 target 'iTunesCharts' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-
+  pod 'SDWebImage', '~>3.8'
   # Pods for iTunesCharts
 
   target 'iTunesChartsTests' do

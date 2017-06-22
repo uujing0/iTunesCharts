@@ -7,9 +7,10 @@
 //
 
 import UIKit
-
+import SDWebImage
 
 class MainViewController: UIViewController {
+    let viewModel = MainViewModel()
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -17,6 +18,12 @@ class MainViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         tableView.delegate = self;
         tableView.dataSource = self;
+
+        self.viewModel.fetchModels {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -27,18 +34,17 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3;
+        return 50;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        /*let cell = tableview.dequeueReusableCellWithIdentifier("FirstCustomCell", forIndexPath: indexPath) as! FirstCustomCell
-        
-        cell.tvLabel.text = menus[indexPath.row]
-        cell.tvImageView.image = UIImage(named: images[indexPath.row])
-        
-        return cell */
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "MainTableViewCell", for: indexPath) as! MainTableViewCell
+        let imageUrl: String = (self.viewModel.models?[indexPath.row].iconImageUrl)!
+        cell.titleLabel.text = self.viewModel.models?[indexPath.row].title
+        cell.imageView?.sd_setImage(with: URL(string: imageUrl), placeholderImage: UIImage(named: "placeholder.png"))
+        
+        //cell.configure(withDelegate: MainViewModel())
+        
         return cell
     }
 }
