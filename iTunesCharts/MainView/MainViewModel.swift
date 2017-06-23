@@ -8,32 +8,51 @@
 
 import Foundation
 
-class MainViewModel: NSObject {
-    var models: [MainModel]?
+//protocol Gettable {
+//    associatedtype Data
+//    
+//    func get(completionHandler: @escaping (Result<Data>) -> Void)
+//    //func parseModel(_ dic: NSDictionary) -> Data
+//}
+
+
+protocol ViewModelDataSource {
+    associatedtype ViewModelData
+    
+    var data: ViewModelData? { get }
+    
+    func loadData(_ completion: @escaping () -> ())
+    func getData<Service: Gettable>(fromService service: Service, completion: @escaping () -> ()) where Service.Data == ViewModelData
+    func showError(error: String)
+}
+
+
+class MainViewModel: NSObject, ViewModelDataSource {
+    var data: [MainModel]?
     
     func numberOfItemsInSection(_ section: Int) -> Int {
-        return models?.count ?? 0
+        return data?.count ?? 0
     }
     
     func modelForItemAtIndexPath(_ indexPath: IndexPath) -> MainModel {
-        return models?[indexPath.row] ?? MainModel()
+        return data?[indexPath.row] ?? MainModel()
     }
     
-    func fetchModels(_ completion: @escaping () -> ()) {
-        self.getModels(fromService: MainService(), completion: completion)
+    func loadData(_ completion: @escaping () -> ()) {
+        self.getData(fromService: MainService(), completion: completion)
     }
     
-    private func getModels<Service: Gettable>(fromService service: Service, completion: @escaping () -> ()) where Service.Data == MainModel {
-            service.get() { result in
-                
-                switch result {
-                case .Success(let models):
-                    self.models = models
-                    completion();
-                case .Failure(let error):
-                    self.showError(error: error)
-                }
+    func getData<Service: Gettable>(fromService service: Service, completion: @escaping () -> ()) where Service.Data == [MainModel] {
+        service.get() { result in
+            
+            switch result {
+            case .Success(let data):
+                self.data = data
+                completion();
+            case .Failure(let error):
+                self.showError(error: error)
             }
+        }
     }
     
     func showError(error: String) {

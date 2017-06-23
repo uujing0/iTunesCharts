@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+struct DetailModel {
+    let screenshotUrls: [String]
+    let releaseNotes: String
+    let minimumOsVersion: String
+    let description: String
+    let trackName: String
+    let artistName: String
+}

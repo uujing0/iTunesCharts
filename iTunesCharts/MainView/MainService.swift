@@ -14,7 +14,6 @@ struct MainService: Gettable {
         let config = URLSessionConfiguration.default
         let session = URLSession(configuration: config)
         let url = URL(string: "https://itunes.apple.com/kr/rss/topfreeapplications/limit=50/genre=6015/json")!
-        //let url = URL(string: "https://itunes.apple.com/lookup?id=1195804784&country=kr")!
         
         let task = session.dataTask(with: url) { (data, response, error) in
             if error != nil {
@@ -26,8 +25,8 @@ struct MainService: Gettable {
             let json = try? JSONSerialization.jsonObject(with: data!, options: [])
             
             if let jsonDict = json as? NSDictionary {
-                if let moviesJSON = jsonDict.value(forKeyPath: "feed.entry") as? [NSDictionary] {
-                    let models = moviesJSON.map { self.parseModel($0) }
+                if let financesJSON = jsonDict.value(forKeyPath: "feed.entry") as? [NSDictionary] {
+                    let models = financesJSON.map { self.parseModel($0) }
                     completionHandler(.Success(models))
                     return
                 }

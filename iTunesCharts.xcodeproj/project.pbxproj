@@ -235,13 +235,21 @@
 		DF1B6B861EFCB01D00895394 /* DetailView */ = {
 			isa = PBXGroup;
 			children = (
+				DF1B6BA31EFCDBB100895394 /* Cells */,
 				DF1B6B8B1EFCD65B00895394 /* DetailViewController.swift */,
-				DF1B6B931EFCD8AB00895394 /* DetailTableViewCell.swift */,
 				DF1B6B971EFCDB0600895394 /* DetailService.swift */,
 				DF1B6B9B1EFCDB2500895394 /* DetailModel.swift */,
 				DF1B6B9F1EFCDB2D00895394 /* DetailViewModel.swift */,
 			);
 			path = DetailView;
+			sourceTree = "<group>";
+		};
+		DF1B6BA31EFCDBB100895394 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DF1B6B931EFCD8AB00895394 /* DetailTableViewCell.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

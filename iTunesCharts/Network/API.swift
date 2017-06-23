@@ -16,8 +16,7 @@ enum Result<T> {
 protocol Gettable {
     associatedtype Data
     
-    func get(completionHandler: @escaping (Result<[Data]>) -> Void)
-    func parseModel(_ dic: NSDictionary) -> Data
+    func get(completionHandler: @escaping (Result<Data>) -> Void)
 }
 
 

@@ -22,7 +22,7 @@ class MainViewController: UIViewController {
         tableView.delegate = self;
         tableView.dataSource = self;
 
-        self.viewModel.fetchModels {
+        self.viewModel.loadData {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }

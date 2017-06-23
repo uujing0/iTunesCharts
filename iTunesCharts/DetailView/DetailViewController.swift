@@ -9,12 +9,24 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    
     var itunesId: String = ""
+    let viewModel = DetailViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+//        self.viewModel.loadData {
+//            DispatchQueue.main.async {
+//                //self.tableView.reloadData()
+//            }
+//        }
+        
+        self.viewModel.loadData(itunesId) {
+            DispatchQueue.main.async {
+                //self.tableView.reloadData()
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
