@@ -41,6 +41,15 @@
 		DF1B6B941EFCD8AB00895394 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B6B931EFCD8AB00895394 /* DetailTableViewCell.swift */; };
 		DF1B6B951EFCD8AB00895394 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B6B931EFCD8AB00895394 /* DetailTableViewCell.swift */; };
 		DF1B6B961EFCD8AB00895394 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B6B931EFCD8AB00895394 /* DetailTableViewCell.swift */; };
+		DF1B6B981EFCDB0600895394 /* DetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B6B971EFCDB0600895394 /* DetailService.swift */; };
+		DF1B6B991EFCDB0600895394 /* DetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B6B971EFCDB0600895394 /* DetailService.swift */; };
+		DF1B6B9A1EFCDB0600895394 /* DetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B6B971EFCDB0600895394 /* DetailService.swift */; };
+		DF1B6B9C1EFCDB2500895394 /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B6B9B1EFCDB2500895394 /* DetailModel.swift */; };
+		DF1B6B9D1EFCDB2500895394 /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B6B9B1EFCDB2500895394 /* DetailModel.swift */; };
+		DF1B6B9E1EFCDB2500895394 /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B6B9B1EFCDB2500895394 /* DetailModel.swift */; };
+		DF1B6BA01EFCDB2D00895394 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B6B9F1EFCDB2D00895394 /* DetailViewModel.swift */; };
+		DF1B6BA11EFCDB2D00895394 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B6B9F1EFCDB2D00895394 /* DetailViewModel.swift */; };
+		DF1B6BA21EFCDB2D00895394 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B6B9F1EFCDB2D00895394 /* DetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +99,9 @@
 		DF1B6B8B1EFCD65B00895394 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		DF1B6B8F1EFCD85300895394 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		DF1B6B931EFCD8AB00895394 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
+		DF1B6B971EFCDB0600895394 /* DetailService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailService.swift; sourceTree = "<group>"; };
+		DF1B6B9B1EFCDB2500895394 /* DetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
+		DF1B6B9F1EFCDB2D00895394 /* DetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		E75638B7D89DA61BD095FE04 /* Pods_iTunesCharts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTunesCharts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -225,6 +237,9 @@
 			children = (
 				DF1B6B8B1EFCD65B00895394 /* DetailViewController.swift */,
 				DF1B6B931EFCD8AB00895394 /* DetailTableViewCell.swift */,
+				DF1B6B971EFCDB0600895394 /* DetailService.swift */,
+				DF1B6B9B1EFCDB2500895394 /* DetailModel.swift */,
+				DF1B6B9F1EFCDB2D00895394 /* DetailViewModel.swift */,
 			);
 			path = DetailView;
 			sourceTree = "<group>";
@@ -511,6 +526,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF1B6B9C1EFCDB2500895394 /* DetailModel.swift in Sources */,
 				DF1B6B801EFCB01100895394 /* MainViewController.swift in Sources */,
 				DF1B6B771EFCB01100895394 /* MainModel.swift in Sources */,
 				DF1B6B7A1EFCB01100895394 /* MainService.swift in Sources */,
@@ -519,7 +535,9 @@
 				DF1B6B7D1EFCB01100895394 /* MainTableViewCell.swift in Sources */,
 				DF1B6B8C1EFCD65B00895394 /* DetailViewController.swift in Sources */,
 				DF1B6B901EFCD85300895394 /* API.swift in Sources */,
+				DF1B6BA01EFCDB2D00895394 /* DetailViewModel.swift in Sources */,
 				DF1B6B941EFCD8AB00895394 /* DetailTableViewCell.swift in Sources */,
+				DF1B6B981EFCDB0600895394 /* DetailService.swift in Sources */,
 				DF1B6B831EFCB01100895394 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -528,14 +546,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF1B6B991EFCDB0600895394 /* DetailService.swift in Sources */,
 				DF1B6B951EFCD8AB00895394 /* DetailTableViewCell.swift in Sources */,
 				DF1B6B781EFCB01100895394 /* MainModel.swift in Sources */,
 				98DB6B551EF82AD9003FA4A7 /* iTunesChartsTests.swift in Sources */,
 				DF1B6B7E1EFCB01100895394 /* MainTableViewCell.swift in Sources */,
 				DF1B6B7B1EFCB01100895394 /* MainService.swift in Sources */,
 				DF1B6B811EFCB01100895394 /* MainViewController.swift in Sources */,
+				DF1B6BA11EFCDB2D00895394 /* DetailViewModel.swift in Sources */,
 				DF1B6B841EFCB01100895394 /* MainViewModel.swift in Sources */,
 				DF1B6B911EFCD85300895394 /* API.swift in Sources */,
+				DF1B6B9D1EFCDB2500895394 /* DetailModel.swift in Sources */,
 				DF1B6B8D1EFCD65B00895394 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -544,14 +565,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF1B6B9A1EFCDB0600895394 /* DetailService.swift in Sources */,
 				DF1B6B961EFCD8AB00895394 /* DetailTableViewCell.swift in Sources */,
 				DF1B6B791EFCB01100895394 /* MainModel.swift in Sources */,
 				98DB6B601EF82AD9003FA4A7 /* iTunesChartsUITests.swift in Sources */,
 				DF1B6B7F1EFCB01100895394 /* MainTableViewCell.swift in Sources */,
 				DF1B6B7C1EFCB01100895394 /* MainService.swift in Sources */,
 				DF1B6B821EFCB01100895394 /* MainViewController.swift in Sources */,
+				DF1B6BA21EFCDB2D00895394 /* DetailViewModel.swift in Sources */,
 				DF1B6B851EFCB01100895394 /* MainViewModel.swift in Sources */,
 				DF1B6B921EFCD85300895394 /* API.swift in Sources */,
+				DF1B6B9E1EFCDB2500895394 /* DetailModel.swift in Sources */,
 				DF1B6B8E1EFCD65B00895394 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
