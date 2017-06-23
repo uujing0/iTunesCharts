@@ -9,12 +9,6 @@
 /* Begin PBXBuildFile section */
 		2B37FA50145843C4C79DC41D /* Pods_iTunesChartsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D31B404B16F1974C40DF2CC /* Pods_iTunesChartsUITests.framework */; };
 		7DFD5C21D31B05D6F1CF2DD1 /* Pods_iTunesChartsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C472151FA2F821B877A13A /* Pods_iTunesChartsTests.framework */; };
-		985858641EFC3D20001B20E7 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9858585D1EFC3D20001B20E7 /* MainModel.swift */; };
-		985858651EFC3D20001B20E7 /* MainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9858585E1EFC3D20001B20E7 /* MainService.swift */; };
-		985858661EFC3D20001B20E7 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9858585F1EFC3D20001B20E7 /* MainTableViewCell.swift */; };
-		985858671EFC3D20001B20E7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985858601EFC3D20001B20E7 /* MainViewController.swift */; };
-		985858681EFC3D20001B20E7 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985858611EFC3D20001B20E7 /* MainViewModel.swift */; };
-		985858691EFC3D20001B20E7 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985858631EFC3D20001B20E7 /* API.swift */; };
 		98DB6B401EF82AD9003FA4A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DB6B3F1EF82AD9003FA4A7 /* AppDelegate.swift */; };
 		98DB6B421EF82AD9003FA4A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DB6B411EF82AD9003FA4A7 /* ViewController.swift */; };
 		98DB6B451EF82AD9003FA4A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98DB6B431EF82AD9003FA4A7 /* Main.storyboard */; };
@@ -23,6 +17,30 @@
 		98DB6B551EF82AD9003FA4A7 /* iTunesChartsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DB6B541EF82AD9003FA4A7 /* iTunesChartsTests.swift */; };
 		98DB6B601EF82AD9003FA4A7 /* iTunesChartsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DB6B5F1EF82AD9003FA4A7 /* iTunesChartsUITests.swift */; };
 		D116DB1B2977A81667EC310D /* Pods_iTunesCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75638B7D89DA61BD095FE04 /* Pods_iTunesCharts.framework */; };
+		DF1B6B771EFCB01100895394 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B6B721EFCB01100895394 /* MainModel.swift */; };
+		DF1B6B781EFCB01100895394 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B6B721EFCB01100895394 /* MainModel.swift */; };
+		DF1B6B791EFCB01100895394 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B6B721EFCB01100895394 /* MainModel.swift */; };
+		DF1B6B7A1EFCB01100895394 /* MainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B6B731EFCB01100895394 /* MainService.swift */; };
+		DF1B6B7B1EFCB01100895394 /* MainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B6B731EFCB01100895394 /* MainService.swift */; };
+		DF1B6B7C1EFCB01100895394 /* MainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B6B731EFCB01100895394 /* MainService.swift */; };
+		DF1B6B7D1EFCB01100895394 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B6B741EFCB01100895394 /* MainTableViewCell.swift */; };
+		DF1B6B7E1EFCB01100895394 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B6B741EFCB01100895394 /* MainTableViewCell.swift */; };
+		DF1B6B7F1EFCB01100895394 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B6B741EFCB01100895394 /* MainTableViewCell.swift */; };
+		DF1B6B801EFCB01100895394 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B6B751EFCB01100895394 /* MainViewController.swift */; };
+		DF1B6B811EFCB01100895394 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B6B751EFCB01100895394 /* MainViewController.swift */; };
+		DF1B6B821EFCB01100895394 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B6B751EFCB01100895394 /* MainViewController.swift */; };
+		DF1B6B831EFCB01100895394 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B6B761EFCB01100895394 /* MainViewModel.swift */; };
+		DF1B6B841EFCB01100895394 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B6B761EFCB01100895394 /* MainViewModel.swift */; };
+		DF1B6B851EFCB01100895394 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B6B761EFCB01100895394 /* MainViewModel.swift */; };
+		DF1B6B8C1EFCD65B00895394 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B6B8B1EFCD65B00895394 /* DetailViewController.swift */; };
+		DF1B6B8D1EFCD65B00895394 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B6B8B1EFCD65B00895394 /* DetailViewController.swift */; };
+		DF1B6B8E1EFCD65B00895394 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B6B8B1EFCD65B00895394 /* DetailViewController.swift */; };
+		DF1B6B901EFCD85300895394 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B6B8F1EFCD85300895394 /* API.swift */; };
+		DF1B6B911EFCD85300895394 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B6B8F1EFCD85300895394 /* API.swift */; };
+		DF1B6B921EFCD85300895394 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B6B8F1EFCD85300895394 /* API.swift */; };
+		DF1B6B941EFCD8AB00895394 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B6B931EFCD8AB00895394 /* DetailTableViewCell.swift */; };
+		DF1B6B951EFCD8AB00895394 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B6B931EFCD8AB00895394 /* DetailTableViewCell.swift */; };
+		DF1B6B961EFCD8AB00895394 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B6B931EFCD8AB00895394 /* DetailTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,12 +65,6 @@
 		3D31B404B16F1974C40DF2CC /* Pods_iTunesChartsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTunesChartsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CE946CE30275C4A34E121B3 /* Pods-iTunesChartsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesChartsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iTunesChartsUITests/Pods-iTunesChartsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7038EE52BA2F6018EBBB040B /* Pods-iTunesCharts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesCharts.release.xcconfig"; path = "Pods/Target Support Files/Pods-iTunesCharts/Pods-iTunesCharts.release.xcconfig"; sourceTree = "<group>"; };
-		9858585D1EFC3D20001B20E7 /* MainModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
-		9858585E1EFC3D20001B20E7 /* MainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainService.swift; sourceTree = "<group>"; };
-		9858585F1EFC3D20001B20E7 /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
-		985858601EFC3D20001B20E7 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		985858611EFC3D20001B20E7 /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		985858631EFC3D20001B20E7 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		98DB6B3C1EF82AD9003FA4A7 /* iTunesCharts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesCharts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98DB6B3F1EF82AD9003FA4A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98DB6B411EF82AD9003FA4A7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +82,14 @@
 		A3C472151FA2F821B877A13A /* Pods_iTunesChartsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTunesChartsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5AE8D5E9AB86B17FE9A8616 /* Pods-iTunesChartsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesChartsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iTunesChartsTests/Pods-iTunesChartsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D1B1ED8C2F3FCF429F647F71 /* Pods-iTunesCharts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesCharts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iTunesCharts/Pods-iTunesCharts.debug.xcconfig"; sourceTree = "<group>"; };
+		DF1B6B721EFCB01100895394 /* MainModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
+		DF1B6B731EFCB01100895394 /* MainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainService.swift; sourceTree = "<group>"; };
+		DF1B6B741EFCB01100895394 /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		DF1B6B751EFCB01100895394 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		DF1B6B761EFCB01100895394 /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		DF1B6B8B1EFCD65B00895394 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		DF1B6B8F1EFCD85300895394 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		DF1B6B931EFCD8AB00895394 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		E75638B7D89DA61BD095FE04 /* Pods_iTunesCharts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTunesCharts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -124,22 +144,10 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		9858585C1EFC3D20001B20E7 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				985858601EFC3D20001B20E7 /* MainViewController.swift */,
-				9858585F1EFC3D20001B20E7 /* MainTableViewCell.swift */,
-				985858611EFC3D20001B20E7 /* MainViewModel.swift */,
-				9858585E1EFC3D20001B20E7 /* MainService.swift */,
-				9858585D1EFC3D20001B20E7 /* MainModel.swift */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
 		985858621EFC3D20001B20E7 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				985858631EFC3D20001B20E7 /* API.swift */,
+				DF1B6B8F1EFCD85300895394 /* API.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -170,7 +178,8 @@
 			isa = PBXGroup;
 			children = (
 				985858621EFC3D20001B20E7 /* Network */,
-				9858585C1EFC3D20001B20E7 /* Main */,
+				DF1B6B711EFCB01100895394 /* MainView */,
+				DF1B6B861EFCB01D00895394 /* DetailView */,
 				98DB6B3F1EF82AD9003FA4A7 /* AppDelegate.swift */,
 				98DB6B411EF82AD9003FA4A7 /* ViewController.swift */,
 				98DB6B431EF82AD9003FA4A7 /* Main.storyboard */,
@@ -197,6 +206,27 @@
 				98DB6B611EF82AD9003FA4A7 /* Info.plist */,
 			);
 			path = iTunesChartsUITests;
+			sourceTree = "<group>";
+		};
+		DF1B6B711EFCB01100895394 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				DF1B6B721EFCB01100895394 /* MainModel.swift */,
+				DF1B6B731EFCB01100895394 /* MainService.swift */,
+				DF1B6B741EFCB01100895394 /* MainTableViewCell.swift */,
+				DF1B6B751EFCB01100895394 /* MainViewController.swift */,
+				DF1B6B761EFCB01100895394 /* MainViewModel.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		DF1B6B861EFCB01D00895394 /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				DF1B6B8B1EFCD65B00895394 /* DetailViewController.swift */,
+				DF1B6B931EFCD8AB00895394 /* DetailTableViewCell.swift */,
+			);
+			path = DetailView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -481,14 +511,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				985858681EFC3D20001B20E7 /* MainViewModel.swift in Sources */,
+				DF1B6B801EFCB01100895394 /* MainViewController.swift in Sources */,
+				DF1B6B771EFCB01100895394 /* MainModel.swift in Sources */,
+				DF1B6B7A1EFCB01100895394 /* MainService.swift in Sources */,
 				98DB6B421EF82AD9003FA4A7 /* ViewController.swift in Sources */,
 				98DB6B401EF82AD9003FA4A7 /* AppDelegate.swift in Sources */,
-				985858651EFC3D20001B20E7 /* MainService.swift in Sources */,
-				985858671EFC3D20001B20E7 /* MainViewController.swift in Sources */,
-				985858641EFC3D20001B20E7 /* MainModel.swift in Sources */,
-				985858691EFC3D20001B20E7 /* API.swift in Sources */,
-				985858661EFC3D20001B20E7 /* MainTableViewCell.swift in Sources */,
+				DF1B6B7D1EFCB01100895394 /* MainTableViewCell.swift in Sources */,
+				DF1B6B8C1EFCD65B00895394 /* DetailViewController.swift in Sources */,
+				DF1B6B901EFCD85300895394 /* API.swift in Sources */,
+				DF1B6B941EFCD8AB00895394 /* DetailTableViewCell.swift in Sources */,
+				DF1B6B831EFCB01100895394 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,7 +528,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF1B6B951EFCD8AB00895394 /* DetailTableViewCell.swift in Sources */,
+				DF1B6B781EFCB01100895394 /* MainModel.swift in Sources */,
 				98DB6B551EF82AD9003FA4A7 /* iTunesChartsTests.swift in Sources */,
+				DF1B6B7E1EFCB01100895394 /* MainTableViewCell.swift in Sources */,
+				DF1B6B7B1EFCB01100895394 /* MainService.swift in Sources */,
+				DF1B6B811EFCB01100895394 /* MainViewController.swift in Sources */,
+				DF1B6B841EFCB01100895394 /* MainViewModel.swift in Sources */,
+				DF1B6B911EFCD85300895394 /* API.swift in Sources */,
+				DF1B6B8D1EFCD65B00895394 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,7 +544,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF1B6B961EFCD8AB00895394 /* DetailTableViewCell.swift in Sources */,
+				DF1B6B791EFCB01100895394 /* MainModel.swift in Sources */,
 				98DB6B601EF82AD9003FA4A7 /* iTunesChartsUITests.swift in Sources */,
+				DF1B6B7F1EFCB01100895394 /* MainTableViewCell.swift in Sources */,
+				DF1B6B7C1EFCB01100895394 /* MainService.swift in Sources */,
+				DF1B6B821EFCB01100895394 /* MainViewController.swift in Sources */,
+				DF1B6B851EFCB01100895394 /* MainViewModel.swift in Sources */,
+				DF1B6B921EFCD85300895394 /* API.swift in Sources */,
+				DF1B6B8E1EFCD65B00895394 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

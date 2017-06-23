@@ -10,12 +10,15 @@ import UIKit
 import SDWebImage
 
 class MainViewController: UIViewController {
-    let viewModel = MainViewModel()
+
     @IBOutlet weak var tableView: UITableView!
+    
+    let viewModel = MainViewModel()
+    var tappedId: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
         tableView.delegate = self;
         tableView.dataSource = self;
 
@@ -30,27 +33,36 @@ class MainViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowDetailView" {
+            let vc: DetailViewController = segue.destination as! DetailViewController
+            vc.itunesId = self.tappedId
+        }
+    }
 }
 
 extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 50;
+        return self.viewModel.numberOfItemsInSection(section);
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MainTableViewCell", for: indexPath) as! MainTableViewCell
-        let imageUrl: String = (self.viewModel.models?[indexPath.row].iconImageUrl)!
-        cell.titleLabel.text = self.viewModel.models?[indexPath.row].title
-        cell.imageView?.sd_setImage(with: URL(string: imageUrl), placeholderImage: UIImage(named: "placeholder.png"))
+        let model = self.viewModel.modelForItemAtIndexPath(indexPath)
         
-        //cell.configure(withDelegate: MainViewModel())
-        
+        cell.rankingLabel.text = "\(indexPath.row + 1)"
+        cell.titleLabel.text = model.title
+        cell.iconImageView.sd_setImage(with: URL(string: model.iconImageUrl), placeholderImage: UIImage(named: "placeholder"))
+
         return cell
     }
 }
 
 extension MainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.tappedId = self.viewModel.modelForItemAtIndexPath(indexPath).itunesId
+        self.performSegue(withIdentifier: "ShowDetailView", sender: self)
     }
 }
 

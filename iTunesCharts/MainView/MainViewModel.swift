@@ -15,15 +15,15 @@ class MainViewModel: NSObject {
         return models?.count ?? 0
     }
     
-    func titleForItemAtIndexPath(_ indexPath: IndexPath) -> String {
-        return models?[indexPath.row].title ?? ""
+    func modelForItemAtIndexPath(_ indexPath: IndexPath) -> MainModel {
+        return models?[indexPath.row] ?? MainModel()
     }
     
     func fetchModels(_ completion: @escaping () -> ()) {
         self.getModels(fromService: MainService(), completion: completion)
     }
     
-    func getModels<Service: Gettable>(fromService service: Service, completion: @escaping () -> ()) where Service.Data == MainModel {
+    private func getModels<Service: Gettable>(fromService service: Service, completion: @escaping () -> ()) where Service.Data == MainModel {
             service.get() { result in
                 
                 switch result {
