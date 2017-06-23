@@ -12,11 +12,11 @@ class DetailViewModel: NSObject {
     var data: DetailModel?
     
     func numberOfItemsInSection(_ section: Int) -> Int {
-        if self.data != nil {
-            return 1
+        guard (self.data != nil) else {
+            return 0
         }
         
-        return 0
+        return 3
     }
     
     func loadData(_ itunesId: String, completion: @escaping () -> ()) {

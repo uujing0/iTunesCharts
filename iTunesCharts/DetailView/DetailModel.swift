@@ -15,4 +15,5 @@ struct DetailModel {
     let description: String
     let trackName: String
     let artistName: String
+    let artworkUrl100: String
 }

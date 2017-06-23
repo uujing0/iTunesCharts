@@ -1,5 +1,5 @@
 //
-//  DetailTableViewCell.swift
+//  DetailDescTableViewCell.swift
 //  iTunesCharts
 //
 //  Created by Jang Yujin on 2017. 6. 23..
@@ -8,11 +8,9 @@
 
 import UIKit
 
-class DetailTableViewCell: UITableViewCell {
+class DetailDescTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var iconImageView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var artistLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

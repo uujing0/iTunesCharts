@@ -50,12 +50,14 @@ struct DetailService: Gettable {
         let description = dic.object(forKey: "description") as! String
         let trackName = dic.object(forKey: "trackName") as! String
         let artistName = dic.object(forKey: "artistName") as! String
+        let artworkUrl100 = dic.object(forKey: "artworkUrl100") as! String
 
         return DetailModel(screenshotUrls: screenshotUrls,
                            releaseNotes: releaseNotes,
                            minimumOsVersion: minimumOsVersion,
                            description: description,
                            trackName: trackName,
-                           artistName: artistName)
+                           artistName: artistName,
+                           artworkUrl100: artworkUrl100)
     }
 }

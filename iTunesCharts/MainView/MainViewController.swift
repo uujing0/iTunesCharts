@@ -19,8 +19,9 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.delegate = self;
-        tableView.dataSource = self;
+        self.title = "금융"
+        self.tableView.delegate = self;
+        self.tableView.dataSource = self;
 
         self.viewModel.loadData {
             DispatchQueue.main.async {
