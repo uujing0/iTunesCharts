@@ -43,7 +43,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MainTableViewCell" id="6cF-co-mt6" customClass="MainTableViewCell" customModule="iTunesCharts" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MainTableViewCell" id="6cF-co-mt6" customClass="MainTableViewCell" customModule="iTunesCharts" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6cF-co-mt6" id="EVa-Oa-hET">
@@ -184,42 +184,60 @@
                                             <outlet property="titleLabel" destination="zhi-EK-yLZ" id="Oa5-pn-VqM"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="DetailImageScrollTableViewCell" rowHeight="300" id="hsX-eU-KTp" customClass="DetailImageScrollTableViewCell" customModule="iTunesCharts" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="DetailImagesTableViewCell" rowHeight="300" id="hsX-eU-KTp" customClass="DetailImagesTableViewCell" customModule="iTunesCharts" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="128" width="375" height="300"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hsX-eU-KTp" id="8Ly-iQ-lZd">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="299"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3zj-03-gQP">
-                                                    <rect key="frame" x="0.0" y="0.5" width="375" height="299.5"/>
-                                                    <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="r7t-pq-LS2">
-                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="299.5"/>
-                                                        </stackView>
-                                                    </subviews>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qbu-ND-AwL">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="299.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstItem="r7t-pq-LS2" firstAttribute="leading" secondItem="3zj-03-gQP" secondAttribute="leading" id="2Qi-BQ-NjP"/>
-                                                        <constraint firstItem="r7t-pq-LS2" firstAttribute="centerX" secondItem="3zj-03-gQP" secondAttribute="centerX" id="5On-j3-lMs"/>
-                                                        <constraint firstAttribute="trailing" secondItem="r7t-pq-LS2" secondAttribute="trailing" id="69u-Qd-J6s"/>
-                                                        <constraint firstAttribute="bottom" secondItem="r7t-pq-LS2" secondAttribute="bottom" id="M9V-6P-vGR"/>
-                                                        <constraint firstItem="r7t-pq-LS2" firstAttribute="centerY" secondItem="3zj-03-gQP" secondAttribute="centerY" id="RMp-dL-4AD"/>
-                                                        <constraint firstItem="r7t-pq-LS2" firstAttribute="height" secondItem="3zj-03-gQP" secondAttribute="height" id="YGK-Og-eOa"/>
-                                                        <constraint firstItem="r7t-pq-LS2" firstAttribute="top" secondItem="3zj-03-gQP" secondAttribute="top" id="agJ-c6-JPt"/>
-                                                        <constraint firstAttribute="height" constant="300" id="eZk-YT-XqC"/>
+                                                        <constraint firstAttribute="height" constant="300" id="Bab-kS-gDB"/>
                                                     </constraints>
-                                                </scrollView>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TPB-EO-HcT">
+                                                        <size key="itemSize" width="200" height="300"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCollectionViewCell" id="hdv-uG-McE" customClass="ImageCollectionViewCell" customModule="iTunesCharts" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                                <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sbv-0o-aWa">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
+                                                                    </imageView>
+                                                                </subviews>
+                                                            </view>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="sbv-0o-aWa" secondAttribute="trailing" id="8W7-wW-uSn"/>
+                                                                <constraint firstItem="sbv-0o-aWa" firstAttribute="leading" secondItem="hdv-uG-McE" secondAttribute="leading" id="AuK-dX-gEL"/>
+                                                                <constraint firstAttribute="bottom" secondItem="sbv-0o-aWa" secondAttribute="bottom" id="RjL-Ee-gUK"/>
+                                                                <constraint firstItem="sbv-0o-aWa" firstAttribute="top" secondItem="hdv-uG-McE" secondAttribute="top" id="SUT-Dt-XLU"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <outlet property="imageView" destination="sbv-0o-aWa" id="UcM-2Q-fzO"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                </collectionView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="3zj-03-gQP" firstAttribute="height" secondItem="8Ly-iQ-lZd" secondAttribute="height" id="T8G-pQ-eN1"/>
-                                                <constraint firstItem="3zj-03-gQP" firstAttribute="centerY" secondItem="8Ly-iQ-lZd" secondAttribute="centerY" id="b3V-TP-539"/>
-                                                <constraint firstItem="3zj-03-gQP" firstAttribute="centerX" secondItem="8Ly-iQ-lZd" secondAttribute="centerX" id="d2v-hV-tah"/>
-                                                <constraint firstItem="3zj-03-gQP" firstAttribute="width" secondItem="8Ly-iQ-lZd" secondAttribute="width" id="nH0-Gj-nIa"/>
+                                                <constraint firstAttribute="trailing" secondItem="qbu-ND-AwL" secondAttribute="trailing" id="4Gb-cv-o4l"/>
+                                                <constraint firstAttribute="bottom" secondItem="qbu-ND-AwL" secondAttribute="bottom" id="DoQ-89-RVM"/>
+                                                <constraint firstItem="qbu-ND-AwL" firstAttribute="top" secondItem="8Ly-iQ-lZd" secondAttribute="top" id="SpU-gM-7ou"/>
+                                                <constraint firstItem="qbu-ND-AwL" firstAttribute="leading" secondItem="8Ly-iQ-lZd" secondAttribute="leading" id="bgs-Fo-b1J"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="scrollView" destination="3zj-03-gQP" id="fcM-p1-5xe"/>
-                                            <outlet property="stackView" destination="r7t-pq-LS2" id="xWv-Ty-Oxc"/>
+                                            <outlet property="collectionView" destination="qbu-ND-AwL" id="V6Y-BJ-rlw"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="DetailDescTableViewCell" rowHeight="100" id="Ie7-Gs-nQF" customClass="DetailDescTableViewCell" customModule="iTunesCharts" customModuleProvider="target">

@@ -36,7 +36,7 @@ class DetailViewController: UIViewController {
     }
 }
 
-extension DetailViewController: UITableViewDataSource {
+extension DetailViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.viewModel.numberOfItemsInSection(section);
     }
@@ -54,8 +54,8 @@ extension DetailViewController: UITableViewDataSource {
             
             return cell
         case 1:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "DetailImageScrollTableViewCell", for: indexPath) as! DetailImageScrollTableViewCell
-            cell.addImages(screenshotUrls: (self.viewModel.data?.screenshotUrls)!)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "DetailImagesTableViewCell", for: indexPath) as! DetailImagesTableViewCell
+            cell.setCollectionViewDataSourceDelegate(self)
             
             return cell
 
@@ -69,9 +69,27 @@ extension DetailViewController: UITableViewDataSource {
             return UITableViewCell()
         }
     }
-}
-
-extension DetailViewController: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     }
 }
+
+extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        let num = self.viewModel.data?.screenshotUrls.count
+        return num!
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCollectionViewCell", for: indexPath) as! ImageCollectionViewCell
+        let url = self.viewModel.data?.screenshotUrls[indexPath.row]
+        
+        cell.imageView.sd_setImage(with: URL(string: url!), placeholderImage: UIImage(named: "placeholder"))
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    }
+}
+
